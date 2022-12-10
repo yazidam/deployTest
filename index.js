@@ -14,7 +14,7 @@ const port = 5500;
 //   });
 // });
 
-app.use("/", async (req, res) => {
+app.get("/all", async (req, res) => {
   const users = await User.find();
   res.json(users);
 });
