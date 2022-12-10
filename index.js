@@ -18,7 +18,6 @@ router.get("/all", async (req, res) => {
   const users = await User.find();
   res.json(users);
 });
-app.use("/.netlify/functions/api", router);
 
 app.listen(port, (err) => {
   err
