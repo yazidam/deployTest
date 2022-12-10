@@ -8,13 +8,13 @@ const router = express.Router();
 const connectDB = require("./config/connectDB");
 connectDB();
 const port = 5500;
-app.use("/", (req, res) => {
-  res.json({
-    message: "hosting good",
-  });
-});
+// app.use("/", (req, res) => {
+//   res.json({
+//     message: "hosting good",
+//   });
+// });
 
-app.use("/all", async (req, res) => {
+app.use("/", async (req, res) => {
   const users = await User.find();
   res.json(users);
 });
