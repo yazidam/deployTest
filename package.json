@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "mode": "production",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "netlify-lambda serve src",
-    "build": "netlify-lambda build src"
+    "start": "nodemon src/api.js"
   },
   "author": "",
   "license": "ISC",
