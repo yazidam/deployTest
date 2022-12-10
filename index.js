@@ -1,13 +1,11 @@
 const express = require("express");
-const User = require("../models/User");
-
-const serverless = require("serverless-http");
+const User = require("./models/User");
 
 const app = express();
 
 const router = express.Router();
 
-const connectDB = require("../config/connectDB");
+const connectDB = require("./config/connectDB");
 connectDB();
 const port = 5500;
 router.get("/", (req, res) => {
@@ -27,4 +25,3 @@ app.listen(port, (err) => {
     ? console.log("erroor", err)
     : console.log(`this server is running on ${port}`);
 });
-module.exports.handler = serverless(app);
