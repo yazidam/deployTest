@@ -14,10 +14,10 @@ app.use("/", (req, res) => {
   });
 });
 
-// router.get("/all", async (req, res) => {
-//   const users = await User.find();
-//   res.json(users);
-// });
+app.use("/all", async (req, res) => {
+  const users = await User.find();
+  res.json(users);
+});
 
 app.listen(port, (err) => {
   err
